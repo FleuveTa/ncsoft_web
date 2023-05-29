@@ -1,0 +1,111 @@
+.news-link{
+    display: block;
+}
+.news-list {
+    .news-item {
+        .news-img {
+            width: 100%;
+            margin-bottom: 10px;
+            border:1px solid #cccccc;
+            height: 230px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .news-content{
+            font-size: 16px;
+            color: var(--text-primary-color);
+            h3{
+                font-size: 22px;
+            }
+            .news-time {
+                padding: 6px 0;
+                color: var(--sub-text-primary-color);
+                i {
+                    font-size: 20px;
+                    color: var(--sub-text-primary-color);
+                }
+                
+            }
+        }
+    }
+}
+
+
+//news Detail
+
+.news-heading {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--text-primary-color);
+}
+.news-title {
+    font-size: 14px;
+    color: var(--text-primary-color);
+    line-height: 1.4;
+}
+.news-content{
+    font-size: 14px;
+    color: var(--text-primary-color);
+    p {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// news Orthor
+.slide-news {
+    
+    ul{
+        list-style: none;
+    }
+    a {
+        padding: 10px;
+        .slide-news-item{
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            cursor: pointer;
+            &.slick-slide {
+                margin: 0 8px !important;
+            }
+            &:hover .slide__new-img img{
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
+.news-orther {
+    .slide__new-img {
+        overflow: hidden;
+        height: 230px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.2s linear;
+        }
+    }
+    .slide__new-content {
+        height: 160px;
+        padding: 10px;
+        color: var(--text-primary-color);
+        .slide__new-heading {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .slide__new-time {
+            padding: 6px 0;
+                color: var(--sub-text-primary-color);
+                i {
+                    font-size: 20px;
+                    color: var(--sub-text-primary-color);
+                }
+        }
+    }
+}
+
+/* the slides */

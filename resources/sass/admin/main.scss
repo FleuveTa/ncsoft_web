@@ -1,0 +1,179 @@
+.message-error {
+    list-style: none;
+    padding-left: 12px;
+    li {
+        font-size: 12px;
+        color: red;
+    }
+}
+
+#page-top {
+    // position:relative;
+    // overflow: hidden;
+}
+.btn__add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    background-color: rgb(60, 60, 230);
+    line-height: 1.2;
+    color: #fff;
+    &:hover {
+        opacity: 0.8;
+        color: #fff;
+    }
+}
+
+.table__manage {
+    th{
+        font-size: 16px;
+    }
+    td{
+        font-size: 16px;
+        img{
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+    td {
+        text-align: center;
+        p.status__lookup {
+            padding: 4px 6px;
+            background-color: #008000;
+            border-radius: 6px;
+            color: #fff;
+        }
+        p.status__nolook{
+            padding: 4px 6px;
+            background-color: #554e4f;
+            border-radius: 6px;
+            color: #fff;
+        }
+    }
+
+    
+    
+}
+.form-group {
+    label{
+        color: #000;
+        .field__require {
+            color: red;
+            font-weight: 600;
+        }
+    }
+    .message-error {
+        list-style: none;
+        li {
+            color: #ff0000;
+        }
+    }
+}
+//addUser
+.user__wrapper {
+    max-width: 1000px;
+}
+// end Add User
+
+
+// edit user
+    .img__preview {
+        width: 180px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+//end edit user
+
+// description 
+.three-line-paragraph {
+    display: block; 
+    display: -webkit-box;
+    line-height: 1.2; 
+    max-height: 16px * 3* 1.2; 
+    -webkit-line-clamp: 3;
+    visibility: visible; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width: 200px; 
+}
+
+.three-line-paragraph-description {
+    display: block; 
+    display: -webkit-box;
+    line-height: 1.2; 
+    max-height: 40px * 3* 1.2; 
+    -webkit-line-clamp: 3;
+    visibility: visible; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width: 200px; 
+}
+.three-line-paragraph-s {
+    display: block; 
+    display: -webkit-box;
+    line-height: 1.2; 
+    max-height: 16px * 3* 1.2; 
+    -webkit-line-clamp: 3;
+    visibility: visible; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width: 100px; 
+}
+
+.two-line-paragraph {
+    display: block; 
+    display: -webkit-box;
+    line-height: 1.2; 
+    max-height: 16px * 2* 1.2; 
+    -webkit-line-clamp: 2;
+    visibility: visible; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    max-width: 300px; 
+}
+
+
+// Recruiment
+.recruiment-trash {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+// end Recruiment
+
+
+//toast success
+// .toast-success {
+//     position:absolute;
+//     padding: 8px;
+//     top: 8%;
+//     right: -360px;
+//     opacity: 0;
+//     display: none;
+//     align-items: center;
+//     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+//     max-width: 360px;
+//     border-left: 6px solid green;
+//     border-radius: 4px;
+//     transition: 1s linear;
+//     .toast-success-icon {
+//         padding: 10px 12px;
+//         i {
+//             font-size: 30px;
+//             color: green;
+//         }
+//     }
+//     &.active {
+//         display: flex;
+//         right: 1%;
+//         opacity: 1;
+//     }
+// }

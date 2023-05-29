@@ -1,0 +1,73 @@
+.recruitment-wrapper {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.detail-recruitment{
+    .recruiment__detail-heading{
+        color: #000;
+        font-weight: 700;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #bfbfbf;
+    }
+    .recruiment__detail-content {
+        h2 {
+            text-transform: capitalize;
+        }
+        ol {
+            li {
+                padding: 6px;
+                line-height: 1.4;
+            }
+        }
+        ul {
+            li {
+                padding: 6px;
+                line-height: 1.4;
+            }
+        }
+    }
+    .recruiment__detail-item {
+        line-height: 1.8;
+    }
+    
+}
+
+
+//custom model dialog
+.modal-dialog {
+
+}
+
+.modal-header {
+    .modal-title {
+        position: relative;
+        font-size: 36px;
+        font-weight: 600;
+        color: var(--primary-green-color);
+        padding: 10px 0;
+        &::after{
+            content:'';
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            background-color: var(--primary-green-color);
+            bottom: 0;
+            left:0;
+        }
+    }
+}
+
+.modal-body{
+    font-size: 16px;
+    .form-label{
+        font-weight: 600;
+        color: var(--text-color);
+        text-transform: capitalize;
+    }
+    .modal-input { 
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+}

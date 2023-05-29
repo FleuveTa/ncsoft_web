@@ -1,0 +1,30 @@
+.hero_content{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    &:hover .hero__img{
+        transform: scale(1.05);
+    }
+    .hero__img{
+        width: 150px;
+        height: 150px;
+        transition: 0.1s ease-in;
+        img{
+        width: 150px;
+        height: 150px;
+            object-fit: cover;
+        }
+    }
+    .hero__content{
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        .hero__title{
+            color: var(--scroll-color);
+            height: 50%;
+        }
+
+    }
+}

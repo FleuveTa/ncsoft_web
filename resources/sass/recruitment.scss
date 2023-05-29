@@ -1,0 +1,88 @@
+.vacacy__heading {
+    .vacacy__hot{
+        text-transform: uppercase;
+        color: var(--primary-color);
+    }
+}
+
+.vacacy__items {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .vacacy__item-heading{
+        height: 30px*1.3*2;
+        color: var(--primary-green-color);
+        font-size: 30px;
+        font-weight: 600;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top:10px;
+
+    }
+
+    .vacacy__item-content{
+        padding: 10px 0;
+        .vacacy__item-crave{
+            display: block;
+            display: -webkit-box;
+            font-size: 16px;
+            height: 16px*1.3*2;
+            line-height: 1.3;
+            -webkit-line-clamp: 1;  /* số dòng hiển thị */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            i{
+                width: 20px;
+                margin: 10px 0;
+                font-size: 16px;
+                color: var(--primary-green-color);
+            }
+            .vacacy__item-text {
+                display: inline-block;
+                font-size: 16px ;
+                font-weight: 550;
+                text-transform: capitalize;
+                color: var(--text-primary-color);
+            }
+            .vacacy__item-sub{
+                display: inline-block;
+                font-size: 16px ;
+                color: var(--text-primary-color);
+            }
+        }
+    }
+}
+
+
+//pagination    
+.pagination-item { 
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary-green-color);
+    border-radius: 50rem;
+    color: var(--text-primary-color);
+    &:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        cursor: pointer;
+    }
+    a {
+        font-size: 16px;
+        color: var(--text-primary-color);
+    }
+    &.active {
+        background-color: var(--primary-color);
+        border: 1px solid transparent;
+        color: #fff;
+    }
+}
