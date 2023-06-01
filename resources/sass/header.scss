@@ -1,7 +1,21 @@
 
 
 #header {
-    background-color: var(--header-background-color);
+    position:fixed;
+    // background-color: var(--header-background-color);
+    background-color: transparent;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    // border-bottom: 1px solid #959595;
+    padding: 4px 0;
+    transition: .2s linear;
+    &.active {
+        background-color: var(--header-background-color);
+        padding: 0;
+        border-bottom: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
 }
 
 .navbar-expand-lg{
@@ -29,6 +43,11 @@
             }
         }
         
+    }
+
+    .navbar-icon-mb {
+        font-size: 24px;
+        color: var(--header-text-color);
     }
 }
 

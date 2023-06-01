@@ -412,8 +412,10 @@
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 125) {
                     $('.scroll-to-top').addClass("active");
+                    $('#header').addClass("active");
                 } else {
                     $('.scroll-to-top').removeClass("active");
+                    $('#header').removeClass("active");
                 }
             });
 

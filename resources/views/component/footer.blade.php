@@ -126,7 +126,7 @@
                 </a>
             </div>
             <div class="footer__social-network-item">
-                <a href="#">
+                <a href="https://www.facebook.com/NCsoftJSC">
                     <i class="fa-brands fa-facebook-f social-network-facebook"></i>
                 </a>
             </div>

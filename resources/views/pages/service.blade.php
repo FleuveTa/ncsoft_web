@@ -64,9 +64,9 @@
     <div class="service__box-banner">
         <div class="service__box-wrapper">
             @if (!empty($data['banner_box_item']))
-                <a href="#service_one">
-                    <div class="service__box-list">
-                        @foreach ($data['banner_box_item'] as $itemBox)
+            <div class="service__box-list">
+                @foreach ($data['banner_box_item'] as $key => $itemBox)
+                        <a href="#{{ $boxService[$key] ?? '' }}">
                             <div class="service__box-item">
                                 <h2 class="box__item-heading two-line-paragraph-xl">
                                     {{ $itemBox['heading'] }}
@@ -77,9 +77,9 @@
                                 </div>
                                 <div class="box__item-circle"></div>
                             </div>
+                        </a>
                         @endforeach
                     </div>
-                </a>
             @endif
         </div>
     </div>
@@ -116,7 +116,7 @@
     </div>
 
     @if (!empty($data['content_first_service']))
-        <div class="service__common">
+        <div class="service__common" id="box-technology">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -149,7 +149,7 @@
 
    
     @if (!empty($data['content_second_service']))
-        <div class="service__common">
+        <div class="service__common" id="box-software">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -183,7 +183,7 @@
     @endif
 
     @if (!empty($data['content_third_service']))
-        <div class="service__common">
+        <div class="service__common" id="box-web">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -212,6 +212,26 @@
                 </div>
             </div>
         </div> 
+    @endif
+
+
+    @if (!empty($data['consultation_service']))
+        <div class="container-fluid consultation px-0">
+            <img src="{{ url('/images/pages/'.$data['consultation_service']['image']) }}" class="cosultation_img" alt="">
+            <div class="consultation__wrapper">
+                <div class="container text-center">
+                    <span class="consultation__comment">
+                        {{ __('consultation_comment_service') }}
+                    </span>
+                    <p class="cosultation__heading">
+                        {{ $data['consultation_service']['heading'] }}
+                    </p>
+                    <a href="/contact-us" class="btn btn__custom-h">
+                        {{ $data['consultation_service']['button'] }}
+                    </a>
+                </div>
+            </div>
+        </div>
     @endif
 
     {{-- Modal video --}}
@@ -255,20 +275,23 @@
             });
 
 
-            $('#myModal').on('shown.bs.modal', function (e) {
+            if($videoSrc !== "") {
+                $('#myModal').on('shown.bs.modal', function (e) {
                 
                 // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
                 $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-            
-            })
-            
-            
-            
-            // stop playing the youtube video when I close the modal
-            $('#myModal').on('hide.bs.modal', function (e) {
-                // a poor man's stop video
-                $("#video").attr('src',$videoSrc); 
-            }) 
+                
+                })
+                
+                
+                
+                // stop playing the youtube video when I close the modal
+                $('#myModal').on('hide.bs.modal', function (e) {
+                    // a poor man's stop video
+                    $("#video").attr('src',$videoSrc); 
+                })
+            }
+             
         })
     </script>
 @endsection

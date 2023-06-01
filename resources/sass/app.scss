@@ -180,7 +180,7 @@ a{
     } 
 
     .content__heading {
-        h1 {
+        h2 {
             color: var(--text-background-color) !important;
         }
     }
@@ -437,11 +437,11 @@ a{
 
     .content__heading{
         &.programming-language-heading{
-            h1 {
+            h2 {
                 margin-top: 4px;
             }
         }
-        h1{
+        h2{
             margin: 20px 0 30px 0;
             font-size: 40px;
             text-transform: capitalize;

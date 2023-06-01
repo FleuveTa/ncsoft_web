@@ -38,6 +38,7 @@ class PageConstant extends Model
         'intro_service',
         'content_first_service',
         'content_second_service',
-        'content_third_service'
+        'content_third_service',
+        'consultation_service'
     ];
 }

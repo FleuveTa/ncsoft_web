@@ -34,7 +34,11 @@
 <div class="container actually container__common">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 pl-40">
-            <img src="{{ url('images/banner.jpg') }}" class="img-fluid" alt="">
+            @if (!empty($dataActuallyDo['image']))
+                <img src="{{ url('images/pages/'.$dataActuallyDo['image']) }}" class="img-fluid" alt="banner">
+            @else 
+                <img src="{{ url('images/banner.jpg') }}" class="img-fluid" alt="banner">
+            @endif
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-6 pr-40">
@@ -43,9 +47,9 @@
                     {{ __('comment_heading_actually_home') }}
                 </span>
                 <div class="content__heading actually__heading">
-                    <h1>
+                    <h2>
                         {{ $dataActuallyDo['heading'] ?? ''}}
-                    </h1>
+                    </h2>
                     <div class="tech__box">
                         <div class="icon__wrapper">
                             <div class="icon__main">
@@ -107,10 +111,10 @@
                             {{ __('comment_heading_inprove_home') }}
                         </span>
                         <div class="content__heading">
-                            <h1 class="">
+                            <h2 class="">
                                 {{ $inprove_info_home['heading'] ?? '' }}
                                 {{-- {{ __('heading_inprove_home') }} --}}
-                            </h1>
+                            </h2>
                             <p class="content__description mb-5 ">
                                 {{ $inprove_info_home['description'] }}
                                 {{-- {{ __('description_inprove_home') }} --}}
@@ -196,9 +200,9 @@
                     {{ __('comment_experience_home') }}
                 </span>
                 <div class="content__heading">
-                    <h1>
+                    <h2>
                         {{ __('heading_experience_home') }}
-                    </h1>
+                    </h2>
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6 my-5">
@@ -234,9 +238,9 @@
                                     </div>
                                     <div class="btn__common btn__experience mb-5">
                                         <i class="fa-solid fa-arrow-right-long btn__common-icon"></i>
-                                        <span class="btn__common-text">
+                                        <a class="btn__common-text" href="{{ route('service') }}">
                                             {{ $itemExperience['button'] ?? '' }}
-                                        </span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="number-box">
@@ -355,9 +359,9 @@
     <div class="container">
         <div class="content__common">
             <div class="content__heading text-center">
-                <h1 style="color: #fff">
+                <h2 style="color: #fff">
                     {{ __('fill_content_home') }}
-                </h1>
+                </h2>
             </div>
             <div class="content__fill-list mb-5">
                 @if (!empty($dataFillContent))
@@ -425,9 +429,9 @@
 <div class="container news container__common">
     <div class="content__common">
         <div class="content__heading text-center">
-            <h1>
+            <h2>
                 {{ __('new_now') }}
-            </h1>
+            </h2>
         </div>
     </div>
 
@@ -469,7 +473,7 @@
                     tại ncsoft
                 </div>
                 <div class="content__heading programming-language-heading">
-                    <h1>{{ __('programming_language_heading_home') }}</h1>
+                    <h2>{{ __('programming_language_heading_home') }}</h2>
                     <p class="content__title my-4">
                         {{ __('programming_language_title_home') }}
                     </p>

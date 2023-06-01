@@ -84,26 +84,25 @@
                         <div class="concat__link">
                             <i class="fa-solid fa-phone"></i>
                             <p>
-                                (+84) 2873 040 030
+                                {{ __('hotline_detail_footer') }}
                             </p>
                         </div>
                         <div class="concat__link">
                             <i class="fa-solid fa-envelope"></i>
                             <p>
-                                ncsoft@gmail.com
+                                {{ __('email_detail_footer') }}
                             </p>
                         </div>
                         <div class="concat__link">
                             <i class="fa-solid fa-location-dot"></i>
                             <p>
-                                Hancorp Plaza, 72 Trần Đăng Ninh, Dịch Vọng, Cầu Giấy
+                                {{ __('address_detail_footer') }}
                             </p>
                         </div>
                         <div class="concat__link">
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-calendar-days"></i>
                             <p>
-                                Thứ 2 – Thứ 6,
-                                Từ 8 giờ 30p sáng tới 5 giờ 30p chiều.
+                                {{ __('working_time_contact') }}
                             </p>
                         </div>
                     </div>

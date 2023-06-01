@@ -8,7 +8,7 @@
                 @php
                     $imageBanner = $bannerItem['image'] ?? '';
                 @endphp
-                <img src='{{ url("images/banners/$imageBanner") }}' alt="" class="img-fluid" >
+                <img src='{{ url("images/banners/$imageBanner") }}' alt="Banner" class="img-fluid" >
                 <div class="overlay"></div>
                 <div class="banner__content">
                     <div class="container">

@@ -4,7 +4,7 @@
             <div class="content__diff content__differently">
                 <div class="row">
                     <div class="col col-sm-12 col-md-12 col-lg-6">
-                        <img src="{{url('images/banner3.jpg')}}" alt="" class="img-fluid img__content">
+                        <img src="{{url('images/banner3.jpg')}}" alt="Banner" class="img-fluid img__content">
                         <p class="heading__sub-caption">
                             power the next
                         </p>

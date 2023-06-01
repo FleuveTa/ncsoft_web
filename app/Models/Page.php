@@ -185,7 +185,7 @@ class Page extends Model
 
     public function getDataService() {
         $getAllPage = $this->getDataPage();
-
+        
 
 
         $banner_service = [];
@@ -195,6 +195,7 @@ class Page extends Model
         $content_first_service = [];
         $content_second_service = [];
         $content_third_service = [];
+        $consultation_service = [];
 
         if(!empty($getAllPage)) {
             foreach($getAllPage as $pageItem) {
@@ -227,12 +228,16 @@ class Page extends Model
                     array_push($content_third_service, $pageItem);
                 }
 
+                if(!empty($pageItem['page_keyword']) && $pageItem['page_keyword'] == 'consultation_service') {
+                    array_push($consultation_service, $pageItem);
+                }
                 
 
 
                 
             }
         }
+
 
         return [
             'banner_service' => $banner_service ? $banner_service[0] : [],
@@ -242,6 +247,7 @@ class Page extends Model
             'content_first_service' => $content_first_service ? $content_first_service[0] : [],
             'content_second_service' => $content_second_service ? $content_second_service[0] : [],
             'content_third_service' => $content_third_service ? $content_third_service[0] : [],
+            'consultation_service' => $consultation_service ? $consultation_service[0] : [],
         ];
     }
 
