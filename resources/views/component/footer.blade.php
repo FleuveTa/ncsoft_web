@@ -120,21 +120,21 @@
         </div>
 
         <div class="footer__social-network">
-            <div class="footer__social-network-item">
+            <!-- <div class="footer__social-network-item">
                 <a href="#">
                     <i class="fa-brands fa-twitter social-network-twitter"></i>
                 </a>
-            </div>
+            </div> -->
             <div class="footer__social-network-item">
-                <a href="https://www.facebook.com/NCsoftJSC">
+                <a target="_blank" href="https://www.facebook.com/NCsoftJSC">
                     <i class="fa-brands fa-facebook-f social-network-facebook"></i>
                 </a>
             </div>
-            <div class="footer__social-network-item " >
+            <!-- <div class="footer__social-network-item " >
                 <a href="#">
                     <i class="fa-brands fa-instagram social-network-instagram"></i>
                 </a>
-            </div>
+            </div> -->
             <div class="footer__social-network-item">
                 <a href="#">
                     <i class="fa-brands fa-invision social-network-invision"></i>

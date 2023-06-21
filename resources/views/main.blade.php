@@ -84,7 +84,7 @@
                 slidesToScroll: 1,
                 arrows: true,
                 speed: 500,
-                fade: true,
+                //fade: true,
                 dots: true,
                 cssEase: 'linear',
                 autoplay: true,
@@ -190,7 +190,7 @@
 
             $('.content__fill-list').slick({
                 dots: true,
-                infinite: false,
+                infinite: true,
                 speed: 300,
                 slidesToShow: 3,
                 slidesToScroll: 3,

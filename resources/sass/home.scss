@@ -16,6 +16,29 @@
     .actually__description {
         color: var(--text-primary-color);
     }
+    .icon__main {
+        position: relative;
+    }
+    .tool__tip {
+        width: 120px;
+        bottom: 120%;
+        left: 50%;
+        margin-left: -60px;
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    .icon__main:hover .tool__tip {
+        visibility: visible;
+      }
 }
 
 // end actually
