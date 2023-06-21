@@ -87,3 +87,6 @@ $('.content__fill-list').slick({
         visibility: visible;
       }
 ```
+##Footer link 
+<br>
+Xoá twitter, insta, thêm target = "_blank" để mở tab mới
