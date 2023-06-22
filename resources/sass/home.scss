@@ -18,28 +18,46 @@
     }
     .icon__main {
         position: relative;
-    }
-    .tool__tip {
-        width: 120px;
-        bottom: 120%;
-        left: 50%;
-        margin-left: -60px;
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
         
-        /* Position the tooltip text - see examples below! */
-        position: absolute;
-        z-index: 1;
+        &:hover {
+            .tool__tip {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .tool__tip {
+            color: #f0f0f0;
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            opacity: 0;
+            margin-bottom: 1em;
+            word-break: break-word;
+            padding: 1em;
+            background-color: #000;
+            font-size: 14px;
+            max-width: 400px;
+            width: max-content;
+            line-height: 1.6;
+            text-align: left;
+            white-space: normal;
+            transform: translate(-50%, 1em);
+            transition: all .35s ease-in-out;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: .5em solid transparent;
+                border-top-color: #000;
+                transform: translate(-50%, 0);
+            }
+        }
     }
-    .icon__main:hover .tool__tip {
-        visibility: visible;
-      }
-}
+} 
 
 // end actually
 

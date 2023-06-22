@@ -54,25 +54,25 @@
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-php"></i>
-                                <span class="tool__tip">PHP là một ngôn ngữ lập trình đã từng rất phổ biến, được dự đoán chết từ 10 năm trước nhưng bây giờ nó vẫn sống</span>
+                                <span class="tool__tip">{{ __('php_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-node-js"></i>
-                                <span class="tool__tip">JS là một trong những ngôn ngữ lập trình phổ biến nhất trong phát triển ứng dụng web</span>
+                                <span class="tool__tip">{{ __('js_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">    
                                 <i class="fa-brands fa-react"></i>
-                                <span class="tool__tip">ReactJS - một thư viện front-end JS được phát triển bởi Facebook</span>
+                                <span class="tool__tip">{{ __('react_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-css3-alt"></i>
-                                <span class="tool__tip">CSS - ngôn ngữ dùng để style tài liệu HTML</span>
+                                <span class="tool__tip">{{ __('css_tooltip') }}</span>
                             </div>
                         </div>
                     </div>

@@ -34,21 +34,25 @@
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-php"></i>
+                                <span class="tool__tip">{{ __('php_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-node-js"></i>
+                                <span class="tool__tip">{{ __('js_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-react"></i>
+                                <span class="tool__tip">{{ __('react_tooltip') }}</span>
                             </div>
                         </div>
                         <div class="icon__wrapper">
                             <div class="icon__main">
                                 <i class="fa-brands fa-css3-alt"></i>
+                                <span class="tool__tip">{{ __('css_tooltip') }}</span>
                             </div>
                         </div>
                     </div>
