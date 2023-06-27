@@ -474,7 +474,7 @@
         <div class=" col-md-12 col-lg-6">
             <div class="content__common">
                 <div class="heading__subtitle">
-                    tại ncsoft
+                    {{ __('heading__subtitle') }}
                 </div>
                 <div class="content__heading programming-language-heading">
                     <h2>{{ __('programming_language_heading_home') }}</h2>
