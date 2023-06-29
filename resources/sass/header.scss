@@ -49,6 +49,7 @@
         font-size: 24px;
         color: var(--header-text-color);
     }
+
 }
 
 .navbar-brand{
@@ -113,4 +114,9 @@
         color: var(--primary-color);
         
     }
+}
+
+#header.expanded {
+    background-color: var(--header-background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

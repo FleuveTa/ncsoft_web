@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ url('images/logo_primary.png') }}">
-    <title>NCSoft</title>
+    <title>NCsoft</title>
 
     <link rel="stylesheet" href="{{ url('bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('slick/slick.css') }}">
@@ -358,11 +358,13 @@
             });
 
             $('.service__box-list').slick({
-                dots: false,
-                infinite: false,
+                dots: true,
+                infinite: true,
                 speed: 300,
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                slidesToScroll: 1,
                 prevArrow: false,
                 nextArrow: false,
                 responsive: [
@@ -421,6 +423,10 @@
 
             $('.scroll-to-top').click(function () {
                 $(window).scrollTop({ top: 0, behavior: 'smooth' });
+            });
+
+            $('.navbar-toggler').click(function () {
+                $('#header').toggleClass("expanded")
             });
 
             // end scroll top

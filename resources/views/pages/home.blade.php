@@ -172,7 +172,7 @@
                         @foreach ($dataImprove as $itemImprove)
                             <div class="col-sm-12 col-md-12 col-lg-6">
                                 <div class="improve__img">
-                                    <a href="#" class="improve__img-link">
+                                    <a href="{{ $itemImprove['heading'] === 'Dịch vụ của chúng tôi' ?  route('service') : '#'}}" class="improve__img-link">
                                         <img src="{{ url('images/pages/'.$itemImprove['image']) }}" class="img-fluid" alt="">
                                         <div class="overlay"></div>
                                         <div class="improve__img-text">
@@ -182,8 +182,6 @@
                                 </div>
                             </div>
                         @endforeach
-
-
                     </div>
                 </div>
             </div>
@@ -469,12 +467,12 @@
 </div>
 
 
-<div class="container programming-language mb-5">
+<div class="container programming-language pt-[500px] mb-5">
     <div class="row">
         <div class=" col-md-12 col-lg-6">
             <div class="content__common">
                 <div class="heading__subtitle">
-                    {{ __('heading__subtitle') }}
+                    {{ __('heading_subtitle_home') }}
                 </div>
                 <div class="content__heading programming-language-heading">
                     <h2>{{ __('programming_language_heading_home') }}</h2>
@@ -494,21 +492,78 @@
                 @if (!empty($dataProgramming))
                 <div class="programming-accordion accordion"  id="accordionExample">
                 @foreach ($dataProgramming as $key => $programmingItem)
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="{{ 'heading-'.$key }}">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ '#collapse-'.$key }}"  aria-controls="{{ 'collapse-'.$key }}">
-                                {{ $programmingItem['heading'] ?? '' }}
-                              </button>
-                            </h2>
-                            <div id="{{ 'collapse-'.$key }}" class="accordion-collapse collapse show" aria-labelledby="{{ 'heading-'.$key }}" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                {{ $programmingItem['title'] ?? '' }}
-                              </div>
+                    @php
+                    $langArr = explode(",", $programmingItem['title']);
+                    @endphp
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="{{ 'heading-'.$key }}">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="{{ '#collapse-'.$key }}" aria-expanded="true"  aria-controls="{{ 'collapse-'.$key }}">
+                            {{ $programmingItem['heading'] ?? '' }}
+                            </button>
+                        </h2>
+                        <div id="{{ 'collapse-'.$key }}" class="accordion-collapse collapse show" aria-labelledby="{{ 'heading-'.$key }}" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            <!-- {{ $programmingItem['title'] ?? '' }} -->
+                            @foreach ($langArr as $langItem)
+                                <img src="{{ url('images/' . $langItem . '.svg') }}" />
+                            @endforeach
                             </div>
-                          </div>
-                          @endforeach
                         </div>
-                    @endif
+                    </div>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container programming-language pt-[500px] mb-5">
+    <div class="row">
+        <div class=" col-md-12 col-lg-6">
+            <div class="content__common">
+                <div class="content__heading programming-language-heading">
+                    <h2>khaziz</h2>
+                    <p class="content__title my-4">
+                        {{ __('product_team_title_home') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-lg-4 offset-lg-2 justify-content-center card_container">
+            <div class="product__card">
+               <h3 class="card_heading">Product team</h3>
+               <div class="logo_product">
+                    <div class="logo_container">
+                        <i class="fa-sharp fa-light fa-screen-users fa-2xl" style="color: #2757aa;"></i>
+                    </div>
+               </div>
+            </div>
+            <div class="product_team_container">
+                <div>
+                    <i class="fa-sharp fa-solid fa-lightbulb"></i>
+                    <p>{{ __('product_team_language_1') }} </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <p>{{ __('product_team_language_2') }} </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <p>{{ __('product_team_language_3') }} </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-table-layout"></i>
+                    <p>{{ __('product_team_language_4') }} </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gear"></i>
+                    <p>{{ __('product_team_language_5') }} </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>{{ __('product_team_language_6') }} </p>
+                </div> 
             </div>
         </div>
     </div>

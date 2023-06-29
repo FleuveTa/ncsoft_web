@@ -86,7 +86,12 @@ html, body{
     box-sizing: inherit;
     line-height: 1.4;
     font-size: 14px;
+    overflow-x: hidden;
 }
+
+body {
+    position: relative
+  }
 
 
 // not infomation
@@ -431,7 +436,6 @@ a{
     .heading__subtitle {
         font-size: 16px;
         font-weight: 650;
-        text-transform: uppercase;
         color: var(--text-primary-color);
     }
 

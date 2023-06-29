@@ -66,7 +66,7 @@
             @if (!empty($data['banner_box_item']))
             <div class="service__box-list">
                 @foreach ($data['banner_box_item'] as $key => $itemBox)
-                        <a href="#{{ $boxService[$key] ?? '' }}">
+                        <a href="#{{ $boxService[$key] ?? 'box-web' }}">
                             <div class="service__box-item">
                                 <h2 class="box__item-heading two-line-paragraph-xl">
                                     {{ $itemBox['heading'] }}
@@ -76,6 +76,7 @@
                                     {!! $itemBox['icon'] !!}
                                 </div>
                                 <div class="box__item-circle"></div>
+                                <!-- $boxService ? $boxService[$key] : 'box-web' -->
                             </div>
                         </a>
                         @endforeach

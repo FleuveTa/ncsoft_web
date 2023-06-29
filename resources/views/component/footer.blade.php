@@ -91,7 +91,7 @@
                             {{ __('hotline_detail_footer') }}
                         </p>
                         <p class="footer__info-subtext">
-                            {{ __('holine') }}
+                            {{ __('hotline') }}
                         </p>
                     </div>
                 </div>

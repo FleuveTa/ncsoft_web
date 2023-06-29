@@ -57,6 +57,7 @@
                     margin: 0 16px;
                     background-color: var(--box-service-color);
                     overflow: hidden;
+                    height: 125px;
     
                     .box__item-heading {
                         font-size: 25px;
@@ -88,7 +89,32 @@
                     }
     
                 }
+                .slick-dots {
+                    position: absolute;
+                    bottom: -50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    list-style: none;
+                    display: flex;
+            
+                    li{
+                        margin: 0 10px;
+                        &.slick-active button{
+                            background-color: black;
+                            border: none;
+                        }
+                        button{
+                            border:1px solid black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50rem;
+                            font-size: 0;
+                            background-color: transparent;
+                            
+                        }
+                    }
             }
+        }
         
     }
 }
@@ -157,6 +183,7 @@
 // service primary
 
     .service__common {
+        scroll-margin-top: 100px; 
         margin: 80px 0;
 
         
