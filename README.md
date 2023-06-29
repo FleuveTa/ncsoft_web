@@ -76,4 +76,27 @@
         }
     }
 ```
+## language tại ncsoft
+home.blade.php / line 472
 
+```bash
+<div class="container programming-language mb-5">
+    <div class="row">
+        <div class=" col-md-12 col-lg-6">
+            <div class="content__common">
+                <div class="heading__subtitle">
+                    {{ __('heading__subtitle') }}     //// thêm vào content language
+                </div>
+                <div class="content__heading programming-language-heading">
+                    <h2>{{ __('programming_language_heading_home') }}</h2>
+                    <p class="content__title my-4">
+                        {{ __('programming_language_title_home') }}
+                    </p>
+                </div>
+                <a href = "#" class="btn btn__custom-h">
+                    <i class="fa-solid fa-gears"></i>
+                    {{ __('button_programming_home') }}
+                </a>
+            </div>
+        </div>
+```
